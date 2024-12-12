@@ -1,3 +1,4 @@
+import os
 
 #Variables
 left = []
@@ -6,7 +7,9 @@ distance = []
 result = 0
 
 def ReadInputs():
-    with open('input.txt', 'r') as file:
+    dir = os.path.dirname(__file__)
+    filename = os.path.join(dir, 'input.txt')
+    with open(filename, 'r') as file:
         lines = file.readlines()
 
     for line in lines:
